@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'mi'
+require 'mi/version'
+puts "Mi version #{Mi::VERSION}"
