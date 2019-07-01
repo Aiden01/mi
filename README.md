@@ -35,25 +35,20 @@ To create PDF file:
 
 ## Example
 
-This is a simple syntax example:
+This is a simple syntax example for drums:
 
 ```
-(tempo: 120)
+bpm:120
 
-(Xylophone
-    [D _ _ D G]
-stop)
+HC,K. HC.   HC,S. HC.
+HC,K. HC,K. HC,S. HC.
+HC,K. HC.   HC,S. HC.
+HC,K. HC,K. HC,S. HC.
 ```
 
-`tempo` it's the tempo you want in your piece
+`bpm:x` for x BPM
 
-`Xylophone` it's the percussion you want to play
-
-it is between `[]` that we place notes, rhythms, ...
-
-`_` it's a silence
-
-`stop` to finish the piece
+`K` = kick, `S` = snare, `HC` = hi-hat closed
 
 ### Syntax
 
@@ -63,24 +58,16 @@ The Mi syntax is meant to be simple enough to understand.
 
 <img align="left" src="images/notes-durations.png" title="Durations-of-notes" height=150>
 
-In Mi we must specify the duration of the note before this one:
+In Mi we must specify the duration of the note after this one with `.`:
 
-```
-[1/8F] 
-```
-
-`1/8` it's a quaver  
-
-<br><br>
-## Octaves
-
-<img align="left" src="images/octaves-notation-helmholtz.png" title="Octave-Helmholtz-notation" height="150">
-
-Mi uses the Helmholtz notation system to indicate octaves:
-
-```
-[c' g'' C,, c''''']  
-```
+- `1/4`it's the default duration
+- `~~` 1 bar
+- `~` 1/2 bar
+- `.` 1/8 bar
+- `..` 1/16 bar
+- `...` 1/32 bar
+- `....` 1/64 bar
+- `.....` 1/128 bar
 
 <br><br>
 
