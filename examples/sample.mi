@@ -1,7 +1,0 @@
--- Comment
-
-(tempo: 120)
-
-(play: Piano
-    [D, _, _, DD]
-stop)
