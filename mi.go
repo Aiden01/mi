@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"time"
 
-	"src/text"
-	"src/util"
-	"src/types"
+	mi "Mi/mi/mi/Mi/src"
 )
 
 func main() {
-	fir _, f := range os.Args[1:] {
-		fmt.Printf("reading %q\n", f)
+	for _, f := range os.Args[1:] {
+		start := time.Now()
+		fmt.Printf("reading %q after %v ns\n", f, start.Nanosecond())
 		d, err := ioutil.ReadFile(f)
 		if err != nil {
 			fmt.Printf("failed to read %q: %v\n", f, err)
@@ -23,7 +23,7 @@ func main() {
 			fmt.Printf("failed to parse %q: %v\n", f, err)
 			continue
 		}
-		err =ioutil.WriteFile(f+".mid", t.MarshalBinary(), 0600)
+		err = ioutil.WriteFile(f+".mid", t.MarshalBinary(), 0600)
 		if err != nil {
 			fmt.Printf("failed to write %q: %v\n", f+".mid", err)
 			continue
