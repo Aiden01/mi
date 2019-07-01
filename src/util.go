@@ -21,7 +21,7 @@ func uvarint(x uint) []byte {
 	return b[:i]
 }
 
-func binn(a interface{}) []byte {
+func bin(a interface{}) []byte {
 	buf := bytes.NewBuffer(nil)
 	binary.Write(buf, binary.BigEndian, a)
 	return buf.Bytes()
