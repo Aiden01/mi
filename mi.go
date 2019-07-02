@@ -6,13 +6,16 @@ import (
 	"os"
 	"time"
 
+	. "github.com/logrusorgru/aurora"
+
 	mi "Mi/mi/mi/Mi/src"
 )
 
 func main() {
 	for _, f := range os.Args[1:] {
 		start := time.Now()
-		fmt.Printf("reading %q after %v ns\n", f, start.Nanosecond())
+		fmt.Println("Reading begins...\n")
+		fmt.Printf("Reading %q after %v %v\n", f, Green(start.Nanosecond()), Green("ns"))
 		d, err := ioutil.ReadFile(f)
 		if err != nil {
 			fmt.Printf("failed to read %q: %v\n", f, err)

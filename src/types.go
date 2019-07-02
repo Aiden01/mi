@@ -60,26 +60,17 @@ func (t *Track) encodeHits() []byte {
 }
 
 type Hit struct {
-	Notes map[byte]struct{}
-	T     uint
-	V     Velocity
-}
-
-func NewHit(ticks uint, v Velocity, notes ...byte) *Hit {
-	h := &Hit{map[byte]struct{}{}, ticks, v}
-	for _, n := range notes {
-		h.Notes[n] = struct{}{}
-	}
-	return h
+	Notes map[byte]Velocity   // Notes to strike with their velocities
+	T     uint                // Nimber of ticks this hit lasts (96 is a quarter bar)
 }
 
 func (h *Hit) encode() []byte {
 	buf := bytes.NewBuffer(nil)
-	for n := range h.Notes {
-		buf.Write([]byte{0, 0x99, n, byte(h.V)})
+	for n, v:= range h.Notes {
+		buf.Write([]byte{0, 0x99, n, byte(v)})
 	}
 	first := true
-	for n := range h.Notes {
+	for n:= range h.Notes {
 		if first {
 			buf.Write(uvarint(h.T))
 			first = false
