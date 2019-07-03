@@ -5,6 +5,10 @@ import (
 	"encoding/binary"
 )
 
+// TODO(amit): Support waits.
+// TODO(amit): Support triplets.
+// TODO(amit): Support ghost notes.
+
 type Track struct {
 	Hits []*Hit
 	BPM  uint

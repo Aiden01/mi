@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	hitToken       = regexp.MustCompile("^(\\d+(?:\\+*|-*)(?:,\\d+(?:\\+*|-*))*)(\\.*)$")
+	hitToken       = regexp.MustCompile("^(\\d+(?:\\+*|-*)(?:,\\d+(?:\\+*|-*))*)(\\.*|~*)$")
 	directiveToken = regexp.MustCompile("^([^:]+):(.*)$")
 	noteToken      = regexp.MustCompile("^(\\d+)(\\+*|-*)$")
 	tokenizer      = regexp.MustCompile("(?m)\\s+")
@@ -26,14 +26,16 @@ var (
 		"+":     FF,
 		"++":    FFF,
 	}
-	durations = map[string]uint{ // Maps dot notation to note duration in ticks.
-		"":       96 * 4,
-		".":      96 * 2,
-		"..":     96,
-		"...":    96 / 2,
-		"....":   96 / 4,
-		".....":  96 / 8,
-		"......": 96 / 16,
+	// Maps dot notation to note duration in ticks.
+	durations = map[string]uint{
+		"~~"      96 * 4,
+		"~"       96 * 2,
+		"":       96,
+		".":      96 / 2,
+		"..":     96 / 4
+		"...":    96 / 8,
+		"....":   96 / 16,
+		".....":  96 / 32,
 	}
 
 	directives = map[string]directive{
