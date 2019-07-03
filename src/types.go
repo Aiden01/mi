@@ -3,6 +3,7 @@ package mi
 import (
 	"bytes"
 	"encoding/binary"
+	"fmt"
 )
 
 // TODO(amit): Support waits.
@@ -14,12 +15,15 @@ type Track struct {
 	BPM  uint
 }
 
-func (t *Track) MarshalBinary() []byte {
+func (t *Track) MarshalBinary() ([]byte, error) {
+	if t.BPM == 0 {
+		return nil, fmt.Errorf("cannot encore with bpm=0")
+	}
 	buf := bytes.NewBuffer(nil)
 	buf.Write(t.encodeHeaderChunk())
 	buf.Write(t.encodeMetaChunk())
 	buf.Write(t.encodeHits())
-	return buf.Bytes()
+	return buf.Bytes(), nil
 }
 
 func (*Track) encodeHeaderChunk() []byte {
