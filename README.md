@@ -13,10 +13,11 @@ I don't want programming to replace music software because these software is muc
     - [Durations of notes](#durations-of-notes)
 - [Roadmap](#roadmap)
 
-## Installation
+## Dependencies
 
-Dependencies:
-    - Golang
+- Golang (all version)
+
+## Installation
 
 To install Mi:
 
