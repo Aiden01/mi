@@ -22,6 +22,8 @@ cd Mi
 go run main.go your-mi-file.mi
 ```
 
+Mi will generate a midi file from your .mi file.
+
 ## Example
 
 This is a simple syntax example for drums:
@@ -61,4 +63,5 @@ In Mi we must specify the duration of the note after this one with `.`:
 ### Roadmap
 
 - [x] Grammar
-- [ ] Parser
+- [x] Parser
+    - [ ] Optimize code and Mi syntax
