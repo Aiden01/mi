@@ -21,19 +21,19 @@ I don't want programming to replace music software because these software is muc
 
 To install Mi:
 
-```
+```bash
 git clone https://github.com/eagle453/Mi.git
 cd Mi
 go run main.go your-mi-file.mi
 ```
 
-Mi will generate a midi file from your .mi file.
+> Mi will generate a midi file from your .mi file.
 
 ## Example
 
 This is a simple syntax example for drums:
 
-```
+```ruby
 bpm:120
 
 HC,K. HC.   HC,S. HC.
