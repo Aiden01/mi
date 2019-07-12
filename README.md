@@ -15,6 +15,9 @@ I don't want programming to replace music software because these software is muc
 
 ## Installation
 
+Dependencies:
+    - Golang
+
 To install Mi:
 
 ```
