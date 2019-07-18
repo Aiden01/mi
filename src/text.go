@@ -1,6 +1,5 @@
 package mi
 
-
 import (
 	"fmt"
 	"regexp"
@@ -28,14 +27,14 @@ var (
 	}
 	// Maps dot notation to note duration in ticks.
 	durations = map[string]uint{
-		"~~":     96 * 4,
-		"~":      96 * 2,
-		"":       96,
-		".":      96 / 2,
-		"..":     96 / 4,
-		"...":    96 / 8,
-		"....":   96 / 16,
-		".....":  96 / 32,
+		"~~":    96 * 4,
+		"~":     96 * 2,
+		"":      96,
+		".":     96 / 2,
+		"..":    96 / 4,
+		"...":   96 / 8,
+		"....":  96 / 16,
+		".....": 96 / 32,
 	}
 
 	directives = map[string]directive{
@@ -44,8 +43,9 @@ var (
 )
 
 func init() {
-	for i := byte(35); i <= 81; i++ {
-		drumNotes[fmt.Sprint(i)] = i
+	byteMax := int(^byte(0))
+	for i := 1; i <= byteMax; i++ {
+		drumNotes[fmt.Sprint(i)] = byte(i)
 	}
 }
 

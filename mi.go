@@ -8,7 +8,7 @@ import (
 
 	. "github.com/logrusorgru/aurora"
 
-	mi "Mi/mi/mi/Mi/src"
+	mi "mi/src"
 )
 
 func main() {
