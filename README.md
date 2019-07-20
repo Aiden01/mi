@@ -7,7 +7,7 @@ I'm a big fan of music (percussion more precisely) and programming, why not merg
 I don't want programming to replace music software because these kind of software are much more suitable and offer much more tools for music manipulation; but I find it fun to play music from some code.
 
 - [The Mi programming language](#the-mi-programming-language)
-- [Installation](#installation)
+- [Installation](#installation-and-usage)
 - [Example](#example)
 - [Syntax](#syntax)
     - [Durations of notes](#durations-of-notes)
