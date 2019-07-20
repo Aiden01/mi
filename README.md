@@ -2,11 +2,11 @@
 
 <img align="right" src="images/mi.png" title="Mi logo" height=150>
 
-Mi is a small percussion music programming language for fun.
-I'm a big fan of music (percussion more precisely) and programming, why not merge the two ?
-I don't want programming to replace music software because these software is much more suitable and offers much more tools for music but I find it fun to play music by coding.
+Mi is a small percussion music programming language made for fun.
+I'm a big fan of music (percussion more precisely) and programming, why not merging both?
+I don't want programming to replace music software because these kind of software are much more suitable and offer much more tools for music manipulation; but I find it fun to play music from some code.
 
-- [The Mi programming language](#the-mi-programming-langugae)
+- [The Mi programming language](#the-mi-programming-language)
 - [Installation](#installation)
 - [Example](#example)
 - [Syntax](#syntax)
@@ -15,11 +15,11 @@ I don't want programming to replace music software because these software is muc
 
 ## Dependencies
 
-- Golang (all versions)
+- Golang (any version)
 
 ## Installation and Usage
 
-Mi's installation is a pretty simple 2-step procedure.
+Installing Mi is a pretty simple 2-step procedure.
 
 First of all, you have to run go get to pull the repository to your GO path.<br>
 ```go get github.com/eagle453/mi```<br><br>
@@ -34,7 +34,7 @@ got get github.com/eagle453/mi
 go run main.go your-mi-file.mi
 ```
 
-> Mi will generate a midi file from your mi file.
+> Mi will generate a midi file from your `.mi` file.
 
 ## Example
 
@@ -55,11 +55,11 @@ HC,K. HC,K. HC,S. HC.
 
 ### Syntax
 
-The Mi syntax is meant to be simple enough to understand.
+The syntax of Mi is meant to be simple enough to be understood easily.
 
 ## Durations of notes
 
-In Mi we must specify the duration of the note after this one with `.`:
+In Mi, we must specify the duration of each note by appending one of these symbols:
 
 - `1/4`it's the default duration
 - `~~` 1 bar
