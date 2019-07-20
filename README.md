@@ -28,6 +28,12 @@ Then you need to install `aurora`<br>
 Then just simply run your `mi` file<br>
 ```go run mi.go your-mi-file.mi```
 
+```bash
+got get github.com/eagle453/mi
+# Open the mi folder
+go run main.go your-mi-file.mi
+```
+
 > Mi will generate a midi file from your mi file.
 
 ## Example

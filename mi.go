@@ -7,8 +7,7 @@ import (
 	"time"
 
 	. "github.com/logrusorgru/aurora"
-
-	mi "mi/src"
+	"github.com/eagle453/mi/src"
 )
 
 func main() {
@@ -17,24 +16,24 @@ func main() {
 		fmt.Println("Reading begins...\n")
 		d, err := ioutil.ReadFile(f)
 		if err != nil {
-			fmt.Printf("Failed to read %q: %v\n", f, err)
+			fmt.Printf("%v Failed to read %q: %v\n", (Bold(Red("Error:"))), f, err)
 			continue
 		}
 		t, err := mi.ParseTrack(string(d))
 		if err != nil {
-			fmt.Printf("Failed to parse %q: %v\n", f, err)
+			fmt.Printf("%v Failed to parse %q: %v\n", (Bold(Red("Error:"))), f, err)
 			continue
 		}
 		b, err := t.MarshalBinary()
 		if err != nil {
-			fmt.Printf("Failed to encode: %v\n", err)
+			fmt.Printf("%v Failed to encode: %v\n", (Bold(Red("Error:"))), err)
 			continue
 		}
 		err = ioutil.WriteFile(f+".mid", b, 0600)
 		if err != nil {
-			fmt.Printf("Failed to write %q: %v\n", f+".mid", err)
+			fmt.Printf("%v Failed to write %q: %v\n", (Bold(Red("Error:"))), f+".mid", err)
 			continue
 		}
-		fmt.Printf("Reading %q after %v %v\n", f, Green(start.Nanosecond()), Green("ns"))
+		fmt.Printf("%v Reading %q after %v %v\n", (Bold(Green("Success:"))), f, Green(start.Nanosecond()), Green("ns"))
 	}
 }
