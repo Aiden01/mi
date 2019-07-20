@@ -15,19 +15,20 @@ I don't want programming to replace music software because these software is muc
 
 ## Dependencies
 
-- Golang (all version)
+- Golang (all versions)
 
-## Installation
+## Installation and Usage
 
-To install Mi:
+Mi's installation is a pretty simple 2-step procedure.
 
-```bash
-git clone https://github.com/eagle453/Mi.git
-cd Mi
-go run main.go your-mi-file.mi
-```
+First of all, you have to run go get to pull the repository to your GO path.<br>
+```go get github.com/eagle453/mi```<br><br>
+Then you need to install `aurora`<br>
+```go get -u github.com/logrusorgru/aurora```<br><br>
+Then just simply run your `mi` file<br>
+```go run mi.go your-mi-file.mi```
 
-> Mi will generate a midi file from your .mi file.
+> Mi will generate a midi file from your mi file.
 
 ## Example
 
