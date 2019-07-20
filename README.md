@@ -22,8 +22,8 @@ I don't want programming to replace music software because these software is muc
 To install Mi:
 
 ```bash
-git clone https://github.com/eagle453/Mi.git
-cd Mi
+got get github.com/eagle453/mi
+# Open the mi folder
 go run main.go your-mi-file.mi
 ```
 
