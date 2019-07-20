@@ -2,11 +2,11 @@
 
 <img align="right" src="images/mi.png" title="Mi logo" height=150>
 
-Mi is a small percussion music programming language for fun.
+Mi is a small percussion music programming language made for fun.
 I'm a big fan of music (percussion more precisely) and programming, why not merging both?
-I don't want programming to replace music software because these kind of software are much more suitable and offer much more tools for music, but I find it fun to play music from some code.
+I don't want programming to replace music software because these kind of software are much more suitable and offer much more tools for music manipulation; but I find it fun to play music from some code.
 
-- [The Mi programming language](#the-mi-programming-langugae)
+- [The Mi programming language](#the-mi-programming-language)
 - [Installation](#installation)
 - [Example](#example)
 - [Syntax](#syntax)
